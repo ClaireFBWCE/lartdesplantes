@@ -1,11 +1,12 @@
 
 /* @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i&display=swap');
 
 body{
-    font-family: 'Crimson Text', monospace;
+    font-family: 'Crimson Text', Arial, Helvetica, monospace;
 }
 
 
@@ -147,14 +148,14 @@ a{
 
  h4{
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
 
 p{
     font-size: 14px;
     color : grey;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 a:hover {
@@ -263,7 +264,7 @@ img #fleurs{
 
 .btn {
     border-radius: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     }
 
 .btn-outline-secondary:hover {
@@ -367,7 +368,7 @@ footer h4{
         color: #FFFFFF;
         font-weight: 800;
         font-size: 18px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         padding-bottom: 15px;
 
     }

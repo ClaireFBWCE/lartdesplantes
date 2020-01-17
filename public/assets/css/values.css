@@ -1,12 +1,17 @@
+.nosvaleurs{
+    background-color: rgb(144, 214, 144);
+    margin-top: 40px;
+    padding: 30px 30px;
+}
+
 .nosvaleurs h5{
     font-size: 30px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .valeurs2{
-    background-color: rgb(144, 214, 144);
-    padding-top: 40px;
-    padding-bottom: 40px;
-
+    padding: 10px 40px 20px 40px;
 }
 
 .nosvaleurs .picto>img{
