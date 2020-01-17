@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+
+
+{% block body %}
+
+<section class="bloc-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <br>
+                <h2>Nos produits {{ title }}</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum fuga ullam quidem nostrum consectetur possimus odio vero aperiam nesciunt aliquid, cum blanditiis sit vel incidunt nihil adipisci voluptatum autem.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bloc-produits">
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    <h3><a href="{{ path('product', {'id' : product.id}) }}">{{ product.name }}</h3></a>
+                    <p>{{ product.short_description|slice(0, 100) ~ '...' }}</p>
+                    <img src="/assets/img/{{ product.picture }}">        
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
+
+

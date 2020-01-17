@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client{% endblock %}
+
+
+{% block body %}
+
+<section>
+    <div class="container account">
+        <div class="row signup justify-content-center">
+            {% if not app.user %} 
+            <div class="col-6 text-center">
+                <br>
+                <h3>Inscrivez-vous sur Cosme Planet</h3>
+                {# <a href="{{ path("add_user") }}">Inscription</a>  #}
+                {% include 'user/form.html.twig' %}
+            </div>
+            <div class="col-6 text-center">
+                <br>
+                <h3>Connectez-vous sur Cosme Planet</h3>
+                {# <a href="{{ path("form_login") }}">Connexion</a> #}
+                {% include 'user/form_login.html.twig' %}
+            {% else %}
+                <a class="disconnect" href="{{ path("disconnect") }}"><input type="button" class="btn btn-outline-secondary" value="SE DECONNECTER"></a>
+            {% endif %}    
+                  
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

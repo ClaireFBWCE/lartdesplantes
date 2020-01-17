@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+
+
+
+{% block body %}
+{% include 'flashbag/flashbag.html.twig' %}
+
+<!-- 1er Bloc -->
+
+<section class="container-fluid actualites">
+
+    <div class="row">
+        <div id="actufleurs" class="col-lg-4">
+            <img src="assets/img/actualites.png" class="fleurs img-fluid"  alt="actualites">
+        </div>
+        <div id="actu1" class="col-lg-8">
+            <div class="row">
+                <div class="margebloc">
+                    <h3 class="lesactualites py-4">Nos actualités</h3>
+                    <p>10/12/2019</p>
+                    <h4>10 réflexes pour prendre soin de votre peau au quotidien. </h4>
+                    <p>Pour prendre soin de votre peau et respecter sa nature, veillez tout d’abord à choisir des produits adaptés à votre type de peau. 
+                    Une peau sèche n’a pas les mêmes besoins qu’une peau grasse…</p>
+                    <a href="{{ path("blog") }}" class="voirplus">VOIR PLUS &rarr;	</a>
+                </div>  
+            </div>
+            <div class="row produits">          
+                <div id="actu3" class="col-lg-6">
+                    <div class="margebloc">
+                        <h3><img src="assets/img/face.png" class="face img-fluid py-4"  alt="peau">Soin / visage</h3>
+                        <h4>Full of grace</h4>
+                        <p>Cette crème au parfum printanier verdoyant et rafraîchissant vous enveloppe et vous fera garder le sourire en toute circonstance.</p>
+                        <input type="button" class="btn btn-outline-secondary" value="DECOUVRIR">
+                    </div>    
+                </div> 
+
+                <div id="actu4" class="col-lg-6 d-flex justify-content-end actu6">
+                    <img src="assets/img/produits.jpg" class="mascara img-fluid "  alt="produits"> 
+        
+                </div>    
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 2ÈME BLOC : NOUVEAUTES-->
+<section class="container pt-4">
+    <div class="row">
+        <div class="col-9">
+            <h3> Les nouveautés </h3>
+        </div>
+        <div class="col-3 text-right">
+            <a href="{{ path("product") }}" class="voirplus ">VOIR PLUS &rarr;</a>
+        </div>
+    </div>   
+    <div class="row">
+        {% for product in products|slice(24, 4) %}
+            <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-bordered.html.twig' %}
+            </div> 
+        {% endfor %}    
+    </div>           
+</section>
+
+<!-- 3ÈME BLOC : INCONTOURNABLES -->
+<section class="container pt-4">
+    <!--  row 1 -->
+    <div class="row">
+        <div class="col-lg-9">
+            <h3> Les incontournables</h3>
+        </div>
+        <div class="col-lg-3 text-right">
+            <a href="{{ path("view_must_have") }}" class="voirplus">VOIR PLUS &rarr;</a>
+        </div>
+    </div> 
+    <!-- fin row 1  -->
+
+    <!-- row 2 -->
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <!-- row 2.1  -->
+            <div class="row cardHP">
+                {% for product in products|slice(4, 2) %}
+                    {% include 'cards/card.html.twig' %}
+                {% endfor %}
+            </div>
+            <!-- fin row 2.1 -->
+
+            <!-- row 2.2 -->
+            <div class="row cardHP">
+                {% for product in products|slice(5, 2) %}
+                    {% include 'cards/card.html.twig' %}    
+                {% endfor %}
+            </div>
+            <!-- fin row 2.2 -->
+        </div>   
+
+        <!-- Grande image -->
+
+        <div class="cardHP col-sm-12 col-lg-6 d-flex flex-column justify-content-between">
+        {% for product in products|slice(23, 1) %}
+            <div>
+                <img src="assets/img/{{ product.picture }}" class="produit img-fluid "  alt="produit"> 
+                <div class="margbloc1">
+                    <h4><a href="{{ path('view_product', {'id' : product.id}) }}">{{ product.name }}</a></h4>
+                    <p>{{ product.getShortDescription|slice(0, 100) ~ '...' }}</p>
+                </div>
+            </div>
+            <div>
+                <input type="button" class="btn btn-outline-secondary" value="DECOUVRIR">
+            </div>
+        {% endfor %} 
+        </div>  
+
+    </div>
+    <!-- fin row 2 -->
+
+</section>
+
+<!-- 4eme Bloc VALEURS-->
+{% include 'values/values.html.twig' %}    
+{# 
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3>Les valeurs que nous partageons</h3>
+        </div>
+    </div>   
+
+    <div class="row valeurscosme">
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+        <div class="col-sm-6 col-lg-3 ">
+            <div class="valeurs2">
+                <img class="align-middle" src="assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+
+        <div class="col-sm-6 col-lg-3">
+                <div class="valeurs2">
+                    <img class="align-middle" src="assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                    <h4 class="text-center"> Boy brow </h4>
+                    <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                </div>                                  
+        </div> 
+    </div>           
+</section> #}
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block body %}
+
+
+<!-- 1er Bloc -->
+
+<section class="container-fluid actualites">
+
+    <div class="row">
+        <div id="actufleurs" class="col-lg-4">
+            <img src="/assets/img/fullgrace.jpg" class="fleurs img-fluid"  alt="actualites">
+        </div>
+        <div id="actu1-oneProduct" class="col-lg-8">
+            {# PRODUIT CHOISI #}
+            <div class="margebloc row">
+                {# NOM PRODUIT #}
+                <div class="lesactualites col-12 pb-3">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.getLongDescription }}</p>
+                </div>
+
+                {# QUANTITE PRODUIT #}
+                <div class="margebloc-quantity col-lg-12">                                 
+                    <div id="quantite">
+                        <label for="volume">Quantité</label><br>
+                        <input id="moins" type="button" class="btn btn-outline-secondary" value="-" /><input id ="result" class="btnquantite" type="texte" value="5" maxlength="2" /><!--
+                        
+                        --><input id="plus" type="button" class="btn btn-outline-secondary" value="+" />
+                    </div>  
+
+                    <div class="form-row">
+                        <div class="form-group col-6"> 
+                            <label for="volume">Volume</label><br>
+                            <select class="btnquantiteml" id="volume" name="volume">
+                                <option value="50" selected>50ml</option>
+                                <option value="30">30ml</option>
+                            </select>
+                        </div>                                
+                        <div class="form-group col-6 d-flex justify-content-end">
+                            <input type="button" class="btnpanier btn-outline-secondary panier" value="AJOUTER AU PANIER">
+                        </div>
+                    </div>
+                </div>     
+            </div>
+
+            {# INFOS COMPLEMENTAIRES PRODUIT #}
+            <div class="product-infos row">                
+
+                <div class="margebloc2 col-lg-12">  
+
+                    <div class="accordion" id="accordeonProduit" class="mw-100">
+                        
+                        {# INGREDIENTS #}
+                        <div class="card mw-100 row">
+                            <div class="card-header col-12" id="headingOne">
+                                <h2 class="mb-1">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Ingredients" >
+                                        &gt; Ingredients
+                                    </button>
+                                </h2>
+                            </div>
+                        
+                            <div class="collapse show col-12" id="Ingredients"  data-parent="#accordeonProduit">
+                                <div class="card-body">
+                                    <div>
+                                        {% for ingredient in ingredients %} 
+                                            <p> {{ ingredient.name }} </p> 
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                
+                        {# AVIS CLIENTS #}
+                        <div class="card row">
+                            <div class="card-header col-12" id="headingTwo">
+                                <h2 class="mb-1">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Clients" >
+                                        &gt; Avis clients
+                                    </button>
+                                </h2>
+                            </div>
+                        
+                            <div class="collapse col-12" id="Clients"  data-parent="#accordeonProduit">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <h5> Pauline </h5>
+                                            <img src="assets/img/note.png" alt="note">
+                                            <h6> Magnifique pour la peau !</h6>
+                                            <p>Pour prendre soin de votre peau et respecter sa nature, veillez tout d’abord à choisir des produits adaptés à votre type de peau. Une peau sèche n’a pas les mêmes besoins qu’une peau grasse…</p>
+                                        </li>
+                                        <li>
+                                            <h5> Clémence </h5>
+                                            <img src="assets/img/note.png" alt="note">
+                                            <h6> Sublimes produits !</h6>
+                                            <p>J'adore tous les produits de cette marque, les crèmes sont extraordinaire. Ni trop épaisses, ni trop fluides. Application simple et agréable, qui pénètre assez vite et ne laisse pas de film gras. Hydrate bien et sent super bon.</p>
+                                        </li>
+                                        <li>
+                                            <h5> Antonella </h5>
+                                            <img src="assets/img/note.png" alt="note">
+                                            <h6> J'adoooore... !</h6>
+                                            <p>Crème qui sent bon , c’est frais . Crème non grasse parfait, hydratante, fini doux et soyeux, apaisante. Parfaite ! Et ingrédients bio !
+
+</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        {# BIENFAITS #}
+                        <div class="card row">
+                            <div class="card-header col-12" id="headingThree">
+                                <h2 class="mb-1">
+
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#Lesbienfaits" >
+                                        &gt; Les bienfaits
+                                    </button>
+
+                                </h2>
+                            </div>
+
+
+                            {# <div class="collapse col-12" id="Lesbienfaits"  data-parent="#accordeonProduit">
+                                <div class="card-body"> #}
+
+
+                            <div class="collapse justify-content-center col-12" id="Lesbienfaits"  data-parent="#accordeonProduit"> 
+                                <div class="card-body row">   
+                                    {% for skinneed in skinneeds %} 
+                                        <div class="col-4 align-items-center">
+                                            <div class="valeurs2">
+                                                <img src="assets/img/plante.png"  class="produit img-fluid "  alt="bienfaits">
+                                                <h5 class="text-center"> {{ skinneed.name }} </h5>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                
+                                </div>
+                            </div>                                 
+                        </div>
+                    </div>
+      
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</section>
+
+    
+
+<!-- 2ÈME BLOC -->
+<section class="container pt-4 pb-5">
+    <div class="row">
+        <div class="col-9">
+            <h3> Nos suggestions </h3>
+        </div>
+        <div class="col-3 text-right">
+            <a href="{{ path("product") }}" class="voirplus ">VOIR PLUS &rarr;</a>
+        </div>
+    </div>   
+    <div class="row">
+        {% for product in products|slice(0, 4) %}
+            <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-bordered.html.twig' %}
+            </div> 
+        {% endfor %}     
+    </div>           
+</section>
+
+
+<!-- VALEURS -->
+<section class="container">
+    <div class="row">
+            <div class="col-12">
+            <h3>Les valeurs que nous partageons</h3>
+            </div>
+    </div>   
+
+    <div class="row valeurscosme">
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+        <div class="col-sm-6 col-lg-3 ">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                                  
+        </div> 
+    </div>           
+</section>
+
+
+
+
+{% endblock %}
+

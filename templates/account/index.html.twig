@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compte Client{% endblock %}
+
+
+{% block body %}
+  
+<!-- 1er Bienvenue -->
+​
+<section class="container-fluid ">
+    <div class="row bordurebienvenue">
+        <div class="col-lg-12 test">
+            <h3 class="text-center bienvenue">Bienvenue sur L'art des plantes, les cosmétiques naturels</h3>
+        </div>                   
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+
+        {% if not app.user %}
+
+    <!-- Bloc Gauche -->
+
+        <div class="col-lg-6 uncompte justify-content-center">
+            <div class="row">
+                <div class="col-lg-2 justify-content-center">
+                </div>
+                <div class="col-lg-8 justify-content-center">
+                    <h3>Déjà un compte</h3>
+                    <p> Connectez-vous pour retrouver vos avantages </p>
+                    {% include 'user/form.html.twig' %}
+
+                    
+                    {# <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Email</label>
+                                <input type="email" class="form-control2" id="exampleFormControlInput1" placeholder="nom@example.com">
+                            </div>
+                    </form>
+                    <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Mot de passe</label>
+                                <input type="motdepasse" class="form-control2" id="exampleFormControlInput1" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+                            </div>
+                            <div class="text-right motdepasse">
+                                <a id="password-reset" class="password-reset" href="#" title="Demander la réinitialisation de votre mot de passe">
+                                Mot de passe oublié
+                                </a>
+                            </div>
+                    </form>
+                    <button class="btn" type="submit">CONNEXION</button> #}
+                </div>
+                <div class="col-lg-2 justify-content-center ">
+                </div>
+            </div>    
+        </div> 
+
+    <!-- Bloc Doite -->
+​
+        <div class="col-lg-6 justify-content-center">
+            <div class="row">
+                <div class="col-lg-2 justify-content-center">
+                </div>
+                <div class="col-lg-8 justify-content-center">                
+                    <h3>Inscrivez-vous</h3>
+                    <p> Créez un compte pour profiter de tous les avantages ! </p>
+                    {# <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control2" id="exampleFormControlInput1" placeholder="nom@example.com">
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Mot de passe</label>
+                            <input type="motdepasse" class="form-control2" id="exampleFormControlInput1" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                        <label for="exampleFormControlInput1">Mot de passe de confirmation</label>
+                        <input type="Mot de passe de confirmation" class="form-control2" id="exampleFormControlInput1" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226; ">
+                        </div>
+                    </form>
+                    <button class="btn" type="submit">INSCRIPTION</button>                 #}
+                    
+                    {% include 'user/form_login.html.twig' %}
+
+                </div>
+                <div class="col-lg-2 justify-content-center">
+                </div>
+            </div>
+        </div> 
+
+        {% else %}
+            <div>
+                <a class="disconnect" href="{{ path("disconnect") }}"><input type="button" class="btn btn-outline-secondary" value="SE DECONNECTER"></a>
+            </div>
+        {% endif %}
+
+    </div>
+</section>
+
+<!-- VALEURS -->
+<section class="container">
+    <div class="row">
+            <div class="col-12">
+            <h3>Les valeurs que nous partageons</h3>
+            </div>
+    </div>   
+
+    <div class="row valeurscosme">
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+        <div class="col-sm-6 col-lg-3 ">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                   
+        </div> 
+
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="valeurs2">
+                <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                <h4 class="text-center"> Boy brow </h4>
+                <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+            </div>                                  
+        </div> 
+    </div>           
+</section>
+
+
+
+{% endblock %}

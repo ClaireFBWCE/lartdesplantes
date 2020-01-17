@@ -1,0 +1,309 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+
+
+{% block body %}
+
+<!-- 1er Bloc -->
+
+
+            <!-- ROW/ présentation -->       
+        <section class="container">
+            <div class="row">                 
+                                    
+                    {% if category.id == 1 %}
+                        <div class="col-lg-6 presentationcheveux">
+                            <div class="margebloc">
+                                <h3><img src="/assets/img/corps.png" class="face img-fluid py-4"  alt="corps">Corps</h3>
+                                <HR>
+                                <h4 class="text-uppercase pt-1"> Un corps sublimé </h4>
+                                <p>Pour une peau douce et sublime, vous pouvez compter 
+                                sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de fécule de tapioca</p>
+                            </div>    
+                        </div> 
+                        <div id="actu4" class="col-lg-6 d-flex actu6">
+                            <img src="/assets/img/actualites3.png" class="img-fluid "  alt="produits">                           
+                        </div>
+
+                    {% elseif category.id == 3 %}
+                        <div class="col-lg-6 presentationcheveux">
+                            <div class="margebloc">
+                                <h3><img src="/assets/img/FACE-1.png" class="face img-fluid py-4"  alt="visage">Visage</h3>
+                                <HR>
+                                <h4 class="text-uppercase pt-1"> Un visage parfait </h4>
+                                <p>Pour une peau fraiche et jeune, vous pouvez compter 
+                                sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de fécule de tapioca</p>
+                            </div>    
+                        </div> 
+                        <div id="actu4" class="col-lg-6 d-flex actu6">
+                            <img src="/assets/img/pagecheveux.jpg" class="img-fluid "  alt="produits">                           
+                        </div>
+                    {% elseif category.id == 5 %}
+                        <div class="col-lg-6 presentationcheveux">
+                            <div class="margebloc">
+                                <h3><img src="/assets/img/cheveux.png" class="face img-fluid py-4"  alt="cheveux">Cheveux</h3>
+                                <HR>
+                                <h4 class="text-uppercase pt-1"> Vos cheveux </h4>
+                                <p>Pour des cheveux soyeux et forts, vous pouvez compter 
+                                sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de fécule de tapioca</p>
+                            </div>    
+                        </div> 
+                        <div id="actu4" class="col-lg-6 d-flex actu6">
+                            <img src="/assets/img/pagecheveux.jpg" class="img-fluid "  alt="produits">                           
+                        </div>
+                    {% elseif category.id == 10 %}
+                        <div class="col-lg-6 presentationcheveux">
+                            <div class="margebloc">
+                                <h3><img src="/assets/img/PLANT-9.png" class="face img-fluid py-4"  alt="maquillage">Maquillage</h3>
+                                <HR>
+                                <h4 class="text-uppercase pt-1"> Le maquillage </h4>
+                                <p>Pour un maquillage de reine, vous pouvez compter 
+                                sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de fécule de tapioca</p>
+                            </div>    
+                        </div> 
+                        <div id="actu4" class="col-lg-6 d-flex actu6">
+                            <img src="/assets/img/pagecheveux.jpg" class="img-fluid "  alt="produits">                           
+                        </div>
+                            
+                    {% endif %}
+        
+                                                            
+                        
+            </div>
+            </div>
+        </section>
+
+        {# <!-- Filtres -->
+        <section class="container filter">  
+            <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                    </div> 
+
+                    <div class="col-sm-12 col-lg-6 text-right">
+
+                            <div class="form-row">
+                                    <!-- <div class="form-group col-md-6 col-sm-8"> -->
+                                   <div class="form-group col-6"> 
+                                  <div class=""> 
+
+                                        <label for="Produits"></label>
+                                        <select class="btnquantiteml" id="volume" name="volume">
+                                                <option selected>Produits</option>
+                                                <option>Shampoings</option>
+                                                <option>Masques</option>
+                                                <option>Après-shampoing</option>
+                                        </select>
+                                    </div>  
+                                    
+                                </div>  
+                                    
+                                    <div class="form-group col-6"> 
+                                        <div class=""> 
+                                            <label for="Produits"></label>
+                                            <select class="btnquantiteml" id="volume" name="volume">
+                                                    <option selected>Besoins</option>
+                                                    <option>Nutrition</option>
+                                                    <option>Protection</option>
+                                                    <option>Brillance</option>
+                                                    <option>Détox</option>
+                                                    <option>Anti-chute</option>
+                                            </select>
+                                    </div>                                
+                                </div> 
+
+                            </div>
+                    </div>
+            </div>
+        </section> #}
+
+{% if category.id == 1 %}
+
+    <section class="container pt-5">
+        <div class="row">
+            <div class="col-lg-9">
+                <h3 class="nobordure"> Crème </h3>
+            </div>
+            <div class="col-3 col-3 text-right">
+                <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
+            </div>
+        </div>   
+
+        <div class="row cardHP">
+
+        {% for product in products|slice(0, 4) %}
+                <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+        {% endfor %}       
+
+        </div>           
+    </section>
+
+{% elseif category.id == 3 %}
+
+    <section class="container pt-5">
+        <div class="row">
+            <div class="col-lg-9">
+                <h3 class="nobordure"> Nettoyant et exfoliant </h3>
+            </div>
+            <div class="col-3 col-3 text-right">
+                <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
+            </div>
+        </div>   
+
+        <div class="row cardHP">
+
+        {% for product in products|slice(0, 4) %}
+                <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+        {% endfor %}       
+
+        </div>           
+    </section>
+
+{% elseif category.id == 5 %}
+
+    <section class="container pt-5">
+        <div class="row">
+            <div class="col-lg-9">
+                <h3 class="nobordure"> Shampooing </h3>
+            </div>
+            <div class="col-3 col-3 text-right">
+                <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
+            </div>
+        </div>   
+
+        <div class="row cardHP">
+
+        {% for product in products|slice(0, 4) %}
+                <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+        {% endfor %}       
+
+        </div>           
+    </section>
+
+
+
+    <section class="container pt-2">
+        <div class="row subcateg">
+            <div class="col-9">
+                <h3> Masques </h3>
+            </div>
+            <div class="col-3 col-3 text-right">
+                <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
+            </div>
+        </div>   
+
+        <div class="row cardHP">
+
+            {% for product in products|slice(3, 4) %}
+                <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+            {% endfor %}
+
+        </div> 
+    </section>
+
+
+    <section class="container pt-2">
+        <div class="row subcateg">
+            <div class="col-9">
+                <h3> Après-shampoings </h3>
+            </div>
+            <div class="col-3 col-3 text-right">
+                <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
+            </div>
+        </div> 
+
+        <div class="row cardHP">
+
+            {% for product in products|slice(6, 4) %}
+                <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+            {% endfor %}
+
+        </div>       
+    </section>
+
+{% elseif category.id == 10 %}
+
+    <section class="container pt-5">
+        <div class="row">
+            <div class="col-lg-9">
+                <h3 class="nobordure"> Yeux </h3>
+            </div>
+            <div class="col-3 col-3 text-right">
+                <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
+            </div>
+        </div>   
+
+        <div class="row cardHP">
+
+        {% for product in products|slice(0, 4) %}
+                <div class="col-sm-6 col-lg-3 ">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+        {% endfor %}       
+
+        </div>           
+    </section>
+{% endif %}
+
+
+
+        <!-- 4eme Bloc Valeurs-->
+        <section class="container">
+            <div class="row subcateg">
+                    <div class="col-12">
+                    <h3>Les valeurs que nous partageons</h3>
+                    </div>
+            </div>   
+        
+            <div class="row valeurscosme">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                   
+                </div> 
+        
+                <div class="col-sm-6 col-lg-3 ">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                   
+                </div> 
+        
+                <div class="col-sm-6 col-lg-3">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                   
+                </div> 
+        
+        
+                <div class="col-sm-6 col-lg-3">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                                  
+                </div> 
+            </div>           
+        </section>
+{% endblock %}
+
+
+
+
+

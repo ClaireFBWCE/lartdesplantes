@@ -1,0 +1,414 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&display=swap');
+
+body{
+    font-family: 'Anonymous Pro', monospace;
+    /*overflow-x: hidden;*/
+}
+
+
+.full-container{
+    width: 100%;
+}
+ #actu1{
+margin-left: 0px;
+padding-left:0px;
+
+}
+.actualites{
+    border: 1px solid black;
+}
+
+/* 1er navbar */
+.logo{
+    width: 30%;
+ }
+
+.cp-logo-container{
+    text-align: center !important;
+}
+.cp-icone>img{
+    display: inline-block;
+    height: 40px;
+    margin: 10px;
+}
+
+/*Navbarre*/
+
+
+/*Search*/
+.logo{
+    padding-top: 5px;
+}
+.nav-item{
+    padding-left: 0px;
+}
+
+.persobar .form-control, .form-control-lg{
+    border-radius: 0px;
+    height: 60px;
+}
+
+.persobar .form-control:focus{
+    background-color: black;
+    border-color: rgb(206, 212, 218);
+    box-shadow: none;
+}
+
+i .loupe{
+    height: 35px;
+    width: auto;
+}
+
+.newsletter .content .form-control {
+    background-color: white;
+}
+
+.input-group-text{
+    background-color: transparent;
+}
+
+.input-group-append{
+    background-color: black; 
+}
+.form-control-lg{
+
+padding-left: 40px;
+}
+
+.cp-navbar2{
+    border-top: 1px solid black;
+}
+
+
+/* .cp-cosmeplanet{
+   /* padding-top: 10px;
+   padding-bottom: 10px; * /
+} */
+
+.navbar{
+    border-left: 1px solid black;
+}
+.navbar-ariane .breadcrumb-item + .breadcrumb-item::before {
+    content: none; 
+}
+
+.breadcrumb {
+ background-color: white;
+ padding-top: 1rem!important;
+ padding-bottom: 1rem!important;
+ }
+
+/* .navbar-ariane .breadcrumb-item.active {
+
+ } */
+
+.navbar-ariane .breadcrumb {
+     background: none;
+ }
+
+.navbar .logo>a>img{
+    width: 200px;
+    margin-left: 220px;
+}
+
+.navbar img,
+.nav img{
+     width: 1.2rem;
+ }
+.marge-nav {
+    padding-left: 0px;;
+}
+ /* .navbar {
+    border-bottom: 1px solid black;
+    margin: auto 0;
+ } */
+
+ /*.navbar{
+    border: 1px solid black;
+} */
+
+a{
+    text-decoration: none; 
+    color: black; 
+} 
+.form-control{
+    background-color: black; 
+} 
+
+
+ .face{
+     width: 50px;
+     margin-right: 10px;
+ }
+
+
+ h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 14px;
+    color : grey;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+h3{
+ font-size: 22px;
+ padding-bottom: 20px ;
+ }
+
+.voirplus{
+    padding-bottom: 40px ;
+    }
+
+.produit1{
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.produit1bis{
+    padding-left: 15px;
+}
+
+.xxxxx{
+    margin-right: 0px;
+    
+    
+}
+
+
+
+
+/* NOS ACTUALITES */
+
+#actufleurs{
+border-right: 1px solid black;
+padding-right : 0px;
+padding-left : 0px;
+background-image: url("../img/actualites.png");
+background-size: 650px 850px;
+}
+
+#actufleurs img{
+    height: 100%;
+    width: auto;
+
+
+    }
+#actu4{
+ padding-left: 0px;
+
+    }
+    
+.margebloc1{
+    margin: 15px;
+    }
+.margbloc1>h4{
+    margin-top: 20px;
+    }
+#fleurs{
+    padding-left: -20px;
+
+}
+#actu2 .row-margin{
+    margin-right: -29px;
+    border-top: 1px solid black;
+
+}
+
+.actualites{
+    margin-bottom: 20px;
+}
+
+#actu2{
+    margin-top: 20px;
+}
+.margebloc{
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+
+img #fleurs{
+    height: 100px;
+}
+
+/* input{
+    background-color: white;
+    border-style: 1px solid black!important;
+} */
+
+#actu3{
+    padding-bottom: 20px;
+}
+
+.btn {
+    border-radius: 0px;
+    }
+
+.btn-outline-secondary:hover {
+color: black;
+background-color: #ffffff;
+border-color: #6c757d;
+}
+
+.produits{
+    margin-top: 32px;
+    border-top: 1px solid black;
+    margin-left: 0px;
+}
+
+.produit1{
+    max-width: 100%;
+    height: 100%;  
+}
+
+.cardHP{
+    padding-bottom: 10px;
+}
+
+.pushcard{
+    margin-bottom: 40px;
+}
+
+.actu6{
+    padding-right: 0px;
+}
+
+.mascara{
+    border-left: 1px solid black;
+
+}
+
+.push{
+    width: 100%;
+    height: 85%;
+
+}
+/* FOOTER */
+
+footer{
+    background-color: black;
+}
+
+.email{
+    text-decoration: none; 
+    color: white; 
+} 
+/* footer>a:hover{
+    Color: grey;
+  }
+
+footer>a:visited{
+    color: white;
+  } */
+  
+
+/* NEWSLETTER */
+.newsletter {
+    padding: 80px 0;
+    margin: 0 auto;
+    }
+    
+    .newsletter .content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2; }
+    .newsletter .content h2 {
+    color: #FFFFFF;
+    margin-bottom: 40px; }
+    .newsletter .content .form-control {
+    height: 50px;
+    border-color:#000000;;
+    border-radius:0;
+    }
+    .newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #ffffff;
+    }
+    .newsletter .content .btn {
+    min-height: 50px; 
+    border-radius:0;
+    background: #ffffff;;
+    color: #000000;
+    font-weight:600;
+    }
+
+footer p{
+        color: #FFFFFF;
+    }
+
+footer h4{
+        color: #FFFFFF;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+
+.logo-footer{
+    padding-top: 50px;
+
+}
+
+footer .reseau img{
+    padding: 35px;
+
+
+}
+
+#reseaux{
+    padding-left: 15px;
+    padding-top :50px;
+} 
+
+footer li{
+    list-style: none;
+    display: inline-block;
+
+}
+
+.nav-item li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Bloc 3 */
+
+.valeurs2{
+text-align: center;
+}
+
+.valeurs2 h4{
+    padding-top: 20px;
+}
+
+.valeurscosme{
+    padding-bottom: 70px;
+}
+
+
+/* // Page Maintenance
+
+.maintenance{
+    background-image: url("../img/actualites3.png");
+}
+
+.maint-article h1{
+    text-align: center;
+} */

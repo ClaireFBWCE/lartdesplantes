@@ -1,0 +1,16 @@
+{# {% extends "account/index.html.twig" %} #}
+{% form_theme subscribeForm 'bootstrap_4_layout.html.twig'  %}
+
+
+{# {% block title %}Formulaire d'inscription{% endblock %} #}
+
+{% block body %}
+
+
+<div>
+    {# <h1>Inscription</h1> #}
+    {{ form_start(subscribeForm) }}
+    {{ form_end(subscribeForm) }}
+
+</div>
+{% endblock %}

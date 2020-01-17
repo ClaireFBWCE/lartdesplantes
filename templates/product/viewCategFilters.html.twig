@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos produits{% endblock %}
+
+
+
+{% block body %}
+
+<section class="bloc-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <br>
+                <h2>Tous nos produits {{ title }} </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container filter">  
+    <div class="row">
+            <div class="col-sm-12 col-lg-9">
+            </div> 
+
+            <div class="col-sm-12 col-lg-3 text-right">
+                            
+                <div class="form-group col-6"> 
+                    <div class=""> 
+                        <label for="Produits"></label>
+                        <select class="btnquantiteml" id="volume" name="volume">
+                                <option selected>Besoins</option>
+                                <option>Nutrition</option>
+                                <option>Protection</option>
+                                <option>Brillance</option>
+                                <option>Détox</option>
+                                <option>Anti-chute</option>
+                        </select>
+                    </div>                                
+                    </div> 
+
+                </div>
+            </div>
+    </div>
+</section>
+
+
+<section class="container pt-2"> 
+    <div class="row cardHP">
+
+        {% for product in products %}
+            <div class="col-sm-6 col-lg-3 ">
+            {% include 'cards/card-hair.html.twig' %}
+            </div>
+        {% endfor %}
+
+    </div>           
+</section>
+
+
+        <!-- 4eme Bloc Valeurs-->
+        <section class="container">
+            <div class="row">
+                    <div class="col-12">
+                    <h3> Les valeurs</h3>
+                    </div>
+            </div>   
+        
+            <div class="row valeurscosme">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                   
+                </div> 
+        
+                <div class="col-sm-6 col-lg-3 ">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                   
+                </div> 
+        
+                <div class="col-sm-6 col-lg-3">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                   
+                </div> 
+        
+        
+                <div class="col-sm-6 col-lg-3">
+                    <div class="valeurs2">
+                        <img class="align-middle" src="/assets/img/valeurs.png" class="produit img-fluid "  alt="produit"> 
+                        <h4 class="text-center"> Boy brow </h4>
+                        <p class="text-center">Pour une peau douce et sublime, vous pouvez compter sur la banane fraîche et le beurre de mangue nourrissant, avec une pincée de </p>
+                    </div>                                  
+                </div> 
+            </div>           
+        </section>
+{% endblock %}
+
+
+
+
+
+
+
+
