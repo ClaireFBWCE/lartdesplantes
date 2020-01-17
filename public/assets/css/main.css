@@ -325,6 +325,17 @@ footer>a:visited{
   } */
 
 .connaitre a{
+    font-size: 14px;
+    color : grey;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.connaitre a:hover{
+    color : white;
+    text-decoration: none;
+}
+
+.connaitre>ul>li>p{
     text-decoration: underline;
     text-decoration-color: grey;
     color: grey;
