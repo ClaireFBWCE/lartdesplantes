@@ -120,7 +120,7 @@ class ProductRepository extends ServiceEntityRepository
         $conn = $this->getEntityManager()->getConnection();
         $sql = '  
 
-        SELECT s.name FROM skinneed AS s 
+        SELECT s.name, s.picture_name FROM skinneed AS s 
         LEFT JOIN product_skinneed AS ps ON s.id = ps.skinneed_id
         LEFT JOIN product AS p ON ps.product_id = p.id
         WHERE p.id = :product_id

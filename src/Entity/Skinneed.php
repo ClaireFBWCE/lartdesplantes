@@ -31,6 +31,12 @@ class Skinneed
      */
     private $createdAt;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $pictureName;
+
+   
     public function getId(): ?int
     {
         return $this->id;
@@ -71,4 +77,17 @@ class Skinneed
 
         return $this;
     }
+
+    public function getPictureName(): ?string
+    {
+        return $this->pictureName;
+    }
+
+    public function setPictureName(?string $pictureName): self
+    {
+        $this->pictureName = $pictureName;
+
+        return $this;
+    }
+
 }

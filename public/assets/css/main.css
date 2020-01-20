@@ -59,6 +59,7 @@ padding-left:0px;
     box-shadow: none;
 }
 
+
 i .loupe{
     height: 35px;
     width: auto;
@@ -342,34 +343,41 @@ footer>a:visited{
 }
 
 /* NEWSLETTER */
-.newsletter {
+
+.newsletter-global{
+    padding: 50px 0 60px 0;
+}
+/* .newsletter {
     padding: 80px 0;
     margin: 0 auto;
-    }
+    } */
     
-    .newsletter .content {
-    max-width: 650px;
+.newsletter .content {
+    padding-top: 62px;
+    /* max-width: 650px;
     position: relative;
-    z-index: 2; }
-    .newsletter .content h2 {
+    z-index: 2;  */
+}
+.newsletter .content h2 {
     color: #FFFFFF;
-    margin-bottom: 40px; }
-    .newsletter .content .form-control {
+    margin-bottom: 40px; 
+}
+.newsletter .content .form-control {
     height: 50px;
     border-color:#000000;;
     border-radius:0;
-    }
-    .newsletter .content.form-control:focus {
+}
+.newsletter .content.form-control:focus {
     box-shadow: none;
     border: 2px solid #ffffff;
-    }
-    .newsletter .content .btn {
+}
+.newsletter .content .btn {
     min-height: 50px; 
     border-radius:0;
     background: #ffffff;;
     color: #000000;
     font-weight:600;
-    }
+}
 
 footer p{
         color: grey;;
@@ -385,10 +393,11 @@ footer h4{
     }
 
 
+/* 
 .logo-footer{
     padding-top: 50px;
 
-}
+} */
 
 footer .reseau img{
     padding: 35px;
@@ -397,8 +406,11 @@ footer .reseau img{
 }
 
 #reseaux{
-    padding-left: 15px;
     padding-top :50px;
+} 
+
+#reseaux>ul{
+    padding-left: 0px;
 } 
 
 footer li{

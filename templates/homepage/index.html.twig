@@ -58,7 +58,7 @@
         </div>
     </div>   
     <div class="row">
-        {% for product in products|slice(24, 4) %}
+        {% for product in products|slice(23, 4) %}
             <div class="col-sm-6 col-lg-3 ">
                 {% include 'cards/card-bordered.html.twig' %}
             </div> 
@@ -102,7 +102,7 @@
         <!-- Grande image -->
 
         <div class="cardHP col-sm-12 col-lg-6 d-flex flex-column justify-content-between">
-        {% for product in products|slice(23, 1) %}
+        {% for product in products|slice(22, 1) %}
             <div>
                 <img src="assets/img/{{ product.picture }}" class="produit img-fluid "  alt="produit"> 
                 <div class="margbloc1">
