@@ -47,7 +47,7 @@ class HomepageController extends AbstractController
         return $this->render('maintenance/maintenance.html.twig');
     }
 
-         /**
+     /**
      * @Route("/homepage/blog", name="blog")
      */
     public function blog()

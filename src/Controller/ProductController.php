@@ -49,7 +49,6 @@ class ProductController extends AbstractController
     /**
      * @Route("/fiche-produit-{id}", name="view_product")
      */
-
     public function viewOneProduct(int $id, ProductRepository $repo)
     {
 

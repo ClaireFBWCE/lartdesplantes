@@ -65,12 +65,7 @@ class ApiController extends AbstractController
 
 
 }
-
-
-
 /* on peut faire de é façons pur se connecter à la bdd:
 - soit avec la méthode Request (voir User Controller)
-
-
 */
 
