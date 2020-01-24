@@ -18,25 +18,32 @@ class UserRegisterType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr'  => [
-                    'placeholder' => 'Entrez votre email',
-                    'required' => true  
+                    'placeholder'   => 'nom@example.com',
+                    'class'         => 'boxclaire',
+                    'required'      => true  
                 ]
             ])
             ->add('password', PasswordType::class, [
                 'label'         => 'Mot de passe',
                 'attr'  => [
-                    'placeholder'   => 'Entrez votre mot de passe'
+                    'placeholder'   => 'Entrez votre mot de passe',
+                    'class'         => 'boxclaire'
                 ]
             ])
 
             ->add('confirmPassword', PasswordType::class, [
                 'label' => 'Mot de passe confirmation',
                 'attr'  => [
-                    'placeholder'   => 'Veuillez confirmer votre mot de passe'
+                    'placeholder'   => 'Veuillez confirmer votre mot de passe',
+                    'class'         => 'boxclaire'
                 ]
             ])
 
-            ->add('Enregistrer', SubmitType::class)
+            ->add('Enregistrer', SubmitType::class, [
+                'attr'  => [
+                    'class'         => 'btnNew'
+                ]
+            ])
             ->getForm()
         ;
     }

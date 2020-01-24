@@ -23,10 +23,6 @@ padding-left:0px;
 }
 
 /* 1er navbar */
-.logo{
-    width: 50%;
-    padding-top: 10px;   
- }
 
 .cp-logo-container{
     text-align: center !important;
@@ -43,6 +39,7 @@ padding-left:0px;
 /*Search*/
 .logo{
     padding-top: 5px;
+    max-height: 55px;
 }
 .nav-item{
     padding-left: 0px;
@@ -95,6 +92,7 @@ padding-left: 40px;
 
 .navbar{
     border-left: 1px solid black;
+    max-height: 64px;
 }
 .navbar-ariane .breadcrumb-item + .breadcrumb-item::before {
     content: none; 
@@ -109,6 +107,10 @@ padding-left: 40px;
 /* .navbar-ariane .breadcrumb-item.active {
 
  } */
+
+.breadcrumb-item+.breadcrumb-item::before {
+   content: "";
+}
 
 .navbar-ariane .breadcrumb {
      background: none;
@@ -129,6 +131,7 @@ padding-left: 40px;
 
 .nav-border{
     border-bottom: 1px solid black;
+    height: 65px;
 }
 
 a{
@@ -144,6 +147,7 @@ a{
  .face{
      width: 50px;
      margin-right: 10px;
+     margin-top: -20px;
  }
 
 
@@ -167,7 +171,7 @@ a:hover {
 .margebloc>h3{
  font-size: 40px;
  padding-bottom: 20px ;
- padding-top: 50px ;
+ /* padding-top: 50px ; */
  }
 
 h3{
@@ -175,10 +179,6 @@ h3{
     padding-bottom: 20px ;
 }
 
-.voirplus{
-    padding-bottom: 40px ;
-    padding-top: 50px ;
-    }
 
 .produit1{
     border: 1px solid black;
@@ -204,17 +204,17 @@ h3{
 border-right: 1px solid black;
 padding-right : 0px;
 padding-left : 0px;
-/* background-image: url("../img/actualites.png"); */
-background-size: 650px 850px;
+background-image: url("../img/actualites.png");
+background-position: center;
+background-size: cover;
 }
 
 #actufleurs img{
-    height: 100%;
-    width: auto;
-    }
+    width: 100%;
+}
 #actu4{
- padding-left: 0px;
-    }
+    padding-left: 0px;
+}
     
 .margebloc1{
     margin: 15px;
@@ -261,6 +261,8 @@ img #fleurs{
 
 #actu3{
     padding-bottom: 20px;
+    max-height: 414px;
+
 }
 
 .btn {
@@ -307,6 +309,12 @@ border-color: #6c757d;
     height: 85%;
 
 }
+.homepage .nosvaleurs{
+    margin-top: 40px;
+}
+
+
+
 /* FOOTER */
 
 footer{

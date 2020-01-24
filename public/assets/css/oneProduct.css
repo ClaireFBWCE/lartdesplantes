@@ -20,7 +20,7 @@
     vertical-align: middle;
     border-right: none;
     border-left: none;
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btnquantiteml{
@@ -43,6 +43,7 @@
     height: 38px;
     color: white;
     margin-top : 30px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .card-header{
@@ -73,19 +74,10 @@
     border-right: none;
     border-bottom: none;
     border-radius: 0px;
-    margin-bottom: 10px;
 }
 .lesactualites>h3{
     padding-top: 20px;
 }
-
-/* 
-.accordion{
-}
-
-#accordion{
-} */
-
 
 #actu1-oneProduct>.margebloc {
     margin-left: 5px;
@@ -127,6 +119,10 @@ h6{
 .product-details .btn:hover{
     background-color: rgba(244, 206, 196, 0.644);
     border-color: rgba(244, 206, 196, 0.644);
+}
+
+.oneProduct1 #actufleurs>img{
+    max-height: 949px;
 }
 
 

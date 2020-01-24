@@ -21,19 +21,29 @@
 
 
 <section class="container pt-5"> 
-    <div class="row cardHP">
+    <div class="blocMH">
+        <div class="row cardHP">
 
-        {% for product in products %}
-            <div class="productCateg col-sm-6 col-lg-3">
-            {% include 'cards/card-hair.html.twig' %}
-            </div>
-        {% endfor %}
+            {% for product in products %}
+                <div class="productCateg col-sm-6 col-lg-3">
+                {% include 'cards/card-hair.html.twig' %}
+                </div>
+            {% endfor %}
 
-    </div>           
+        </div>  
+    </div>  
+
+    <div class="allProducts text-right">
+        <a href="{{ path("product") }}"><input type="button" class="btn btn-outline-secondary" value="Voir tous les produits"></a>
+    </div>      
 </section>
 
 <!-- 4eme Bloc VALEURS-->
-{% include 'values/values.html.twig' %} 
+<section>
+    <div>
+        {% include 'values/values.html.twig' %}    
+    </div>
+</section>
 
 {# 
 <section class="container">

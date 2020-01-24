@@ -14,8 +14,11 @@
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="/assets/css/values.css">
-        <link rel="stylesheet" href="/assets/css/connect.css">
         <link rel="stylesheet" href="/assets/css/cheveux.css">
+        <link rel="stylesheet" href="/assets/css/connect.css">
+        <link rel="stylesheet" href="/assets/css/mustHave.css">
+
+
 
 
         {# {% block stylesheets %}
@@ -31,7 +34,7 @@
             <div class="container-fluid">
                 <div class="row d-flex">
                     <div class="col-lg-4 text-center">
-                        <a href="{{ path("homepage") }}"><img src="/assets/img/logo2.png" alt="Logo Cosmeplanet" class="img-fluid logo"></a>
+                        <a href="{{ path("homepage") }}"><img src="/assets/img/logo2.png" alt="Logo L'art des plantes" class="img-fluid logo"></a>
                     </div>
                     <div class="col-lg-4 nav-item active">
                         <form>
@@ -62,7 +65,7 @@
                             <ol class="breadcrumb purple lighten-4">
                                 <li class="breadcrumb-item"><a class="black-text" href="{{ path("homepage") }}">Home</a><i class="fas fa-angle-right mx-2"
                                     aria-hidden="true"></i></li>
-                                <li class="breadcrumb-item active">XXX</li>
+                                <li class="breadcrumb-item active">{% if breadcrumb is defined %} {{ breadcrumb }} {% endif %}</li>
                             </ol>
                         </nav>    
                     </div>
@@ -128,10 +131,10 @@
                         <div class="row ">                                
                             <div id="reseaux" class="col-sm-12 col-lg-12">
                                 <ul class="text-center">
-                                    <li><a href="#" class="reseau"><img src="/assets/img/fb.png"/></a></li>
-                                    <li><a href="#" class="reseau"><img src="/assets/img/pinterest.png"/></a></li>
-                                    <li><a href="#" class="reseau"><img src="/assets/img/twitter.png"/></a></li>
-                                    <li><a href="#" class="reseau1"><img src="/assets/img/insta.png"/></a></li>   
+                                    <li class="reseau"><img src="/assets/img/fb.png"/></li>
+                                    <li class="reseau"><img src="/assets/img/pinterest.png"/></li>
+                                    <li class="reseau"><img src="/assets/img/twitter.png"/></li>
+                                    <li class="reseau">><img src="/assets/img/insta.png"/></li>   
                                 </ul>                                  
                             </div>                                    
                         </div>

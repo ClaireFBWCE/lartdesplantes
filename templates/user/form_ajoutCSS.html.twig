@@ -1,0 +1,62 @@
+{# {% extends "account/index.html.twig" %} #}
+{% form_theme subscribeForm 'bootstrap_4_layout.html.twig'  %}
+
+
+{# {% block title %}Formulaire d'inscription{% endblock %} #}
+
+{% block body %}
+
+
+{# <div>
+    {# <h1>Inscription</h1> #}
+    {# {{ form_start(subscribeForm) }} #}
+    {# {{ form_end(subscribeForm) }} #}
+
+{# </div> #}
+
+<div >
+
+
+    {{ form_start(subscribeForm) }}
+        {# <div class="my-custom-class-for-errors">
+            {{ form_errors(subscribeForm) }}
+        </div> #}
+
+        <div class="row">
+            <div class="col">
+                {{ form_row(subscribeForm.task) }}
+            </div>
+            <div class="col" id="some-custom-id">
+                {{ form_row(subscribeForm.dueDate) }}
+    {{ form_widget(subscribeForm, { 'attr': {'class': 'form-control2'} }) }}
+            </div>
+        </div>
+    {{ form_end(subscribeForm) }}
+
+{#                     
+    {{ form_start(subscribeForm) }}
+    {{ form_end(subscribeForm) }} #}
+            
+    {# <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="email" class="form-control2" id="exampleFormControlInput1" placeholder="nom@example.com">
+        </div>
+    </form>
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Mot de passe</label>
+            <input type="motdepasse" class="form-control2" id="exampleFormControlInput1" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+        </div>
+    </form>
+    <form>
+        <div class="form-group">
+        <label for="exampleFormControlInput1">Mot de passe de confirmation</label>
+        <input type="Mot de passe de confirmation" class="form-control2" id="exampleFormControlInput1" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226; ">
+        </div>
+    </form> #}
+    {# <button class="btn" type="submit">INSCRIPTION</button>                 #}
+</div>        
+
+
+{% endblock %}

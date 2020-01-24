@@ -1,5 +1,11 @@
     /*Bouton quantité*/
 
+.oneProduct1{
+    /* max-height: 950px; */
+    border-bottom: 1px solid black;
+}
+    
+    
 #quantite{
     margin-bottom: 25px;
 
@@ -88,7 +94,7 @@ font-family: 'Open Sans', sans-serif;
     margin-left: 0;
 }
 .margebloc2{
-    padding-left: 14.7px;
+    padding-left: 13.7px;
 }
 
 h5{
@@ -173,4 +179,9 @@ margin-bottom: 20px;
 
 .productCateg{
     margin-bottom: 40px;
+}
+
+
+.oneProduct1 #actufleurs>img{
+    max-height: 949px;
 }

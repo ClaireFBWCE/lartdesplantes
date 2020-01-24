@@ -1,16 +1,18 @@
 {% extends 'base.html.twig' %}
 
+{% set chevron = '<b>ttt</b>' %}
+
+{% set breadcrumb = product.category.name %}
 
 {% block title %}{{ product.name }} - produit - L'art des plantes{% endblock %}
 
 {% block body %}
 
-
 <!-- 1er Bloc -->
 
-<section class="container-fluid actualites">
+<section class="container-fluid ">
 
-    <div class="row">
+    <div class="row oneProduct1">
         <div id="actufleurs" class="col-lg-4">
             <img src="/assets/img/fullgrace.jpg" class="fleurs img-fluid"  alt="actualites">
         </div>
@@ -105,9 +107,7 @@
                                             <h5> Antonella </h5>
                                             <img src="assets/img/note.png" alt="note">
                                             <h6> J'adoooore... !</h6>
-                                            <p>Crème qui sent bon , c’est frais . Crème non grasse parfait, hydratante, fini doux et soyeux, apaisante. Parfaite ! Et ingrédients bio !
-
-</p>
+                                            <p>Crème qui sent bon , c’est frais . Crème non grasse parfait, hydratante, fini doux et soyeux, apaisante. Parfaite ! Et ingrédients bio !</p>
                                         </li>
                                     </ul>
                                 </div>

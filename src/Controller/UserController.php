@@ -18,7 +18,7 @@ class UserController extends AbstractController
      */
     public function add(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder)
     {
-
+        die('add');
         $user = new User();
         $form = $this->createForm(UserRegisterType::class, $user);
 
@@ -34,7 +34,7 @@ class UserController extends AbstractController
             $manager->persist($user);
             $manager->flush();
 
-            $this->addFlash('success', 'Vous êtes bien inscrit');
+            $this->addFlash('success', 'Vous êtes bien inscrit, vous pouvez désormais vous connecter');
             return $this->redirectToRoute('homepage');
         }
 
@@ -63,6 +63,10 @@ class UserController extends AbstractController
      */
     public function connect()
     {
+        
+        $this->addFlash('success', 'Vous êtes bien connecté(e)');
+        return $this->redirectToRoute('homepage');
+
         /*$form = $this->createForm(UserLoginType::class);
         
         return $this->render('user/form_login.html.twig', [

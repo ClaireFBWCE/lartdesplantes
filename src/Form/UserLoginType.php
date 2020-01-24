@@ -18,17 +18,23 @@ class UserLoginType extends AbstractType
             'label' => 'Email',
             'attr'  => [
                 'placeholder' => 'Entrez votre email',
+                'class'         => 'boxclaire',
                 'required' => true  
             ]
         ])
         ->add('password', PasswordType::class, [
             'label'         => 'Mot de passe',
             'attr'  => [
-                'placeholder'   => 'Entrez votre mot de passe'
+                'placeholder'   => 'Entrez votre mot de passe',
+                'class'         => 'boxclaire',
             ]
         ])
 
-        ->add('Connexion', SubmitType::class)
+        ->add('Connexion', SubmitType::class, [
+            'attr'  => [
+                'class'         => 'btnNew'
+            ]
+        ])
         ->getForm()
     ;
     }

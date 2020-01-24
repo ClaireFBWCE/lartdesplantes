@@ -1,13 +1,13 @@
 
 <div class="produit1 d-flex flex-column justify-content-between">
     <div>
-        <img src="assets/img/{{ product.picture }}" class="produit img-fluid "  alt="produit"> 
+        <a href="{{ path('view_product', {'id' : product.id}) }}"><img src="assets/img/{{ product.picture }}" class="produit img-fluid "  alt="produit"></a>
         <div class="margebloc1">
             <h4><a href="{{ path('view_product', {'id' : product.id}) }}">{{ product.name }}</a></h4>
             <p>{{ product.getShortDescription|slice(0, 100) ~ '…'}}</p>
         </div>
     </div>
     <div class="produit1bis">                
-        <input type="button" class="btn btn-outline-secondary" value="DECOUVRIR">
+        <a href="{{ path('view_product', {'id' : product.id}) }}"><input type="button" class="btn btn-outline-secondary" value="DECOUVRIR"></a>
     </div> 
 </div>

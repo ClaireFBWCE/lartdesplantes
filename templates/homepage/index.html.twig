@@ -2,9 +2,6 @@
 
 {% block title %}Homepage - L'art des plantes{% endblock %}
 
-
-
-
 {% block body %}
 {% include 'flashbag/flashbag.html.twig' %}
 
@@ -14,7 +11,7 @@
 
     <div class="row">
         <div id="actufleurs" class="col-lg-4">
-            <img src="assets/img/actualites.png" class="fleurs img-fluid"  alt="actualites">
+            {# <img src="assets/img/actualites4.png" class="fleurs img-fluid"  alt="actualites"> #}
         </div>
         <div id="actu1" class="col-lg-8">
             <div class="row">
@@ -24,16 +21,16 @@
                     <h4>10 réflexes pour prendre soin de votre peau au quotidien. </h4>
                     <p>Pour prendre soin de votre peau et respecter sa nature, veillez tout d’abord à choisir des produits adaptés à votre type de peau. 
                     Une peau sèche n’a pas les mêmes besoins qu’une peau grasse…</p>
-                    <a href="{{ path("blog") }}" class="voirplus">VOIR PLUS &rarr;	</a>
+                    <a href="#" class="voirplus">VOIR PLUS &rarr;	</a>
                 </div>  
             </div>
             <div class="row produits">          
                 <div id="actu3" class="col-lg-6">
-                    <div class="margebloc">
-                        <h3><img src="assets/img/face.png" class="face img-fluid py-4"  alt="peau">Soin / visage</h3>
+                    <div class="margebloc py-4">
+                        <h3><img src="assets/img/face.png" class="face img-fluid"  alt="peau">Soin / visage</h3>
                         <h4>Full of grace</h4>
                         <p>Cette crème au parfum printanier verdoyant et rafraîchissant vous enveloppe et vous fera garder le sourire en toute circonstance.</p>
-                        <input type="button" class="btn btn-outline-secondary" value="DECOUVRIR">
+                        <a href="{{ path('product') }}"><input type="button" class="btn btn-outline-secondary" value="DECOUVRIR"></a>
                     </div>    
                 </div> 
 
@@ -53,7 +50,7 @@
         <div class="col-9">
             <h3> Les nouveautés </h3>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-3 text-right pt-2">
             <a href="{{ path("product") }}" class="voirplus ">VOIR PLUS &rarr;</a>
         </div>
     </div>   
@@ -69,11 +66,11 @@
 <!-- 3ÈME BLOC : INCONTOURNABLES -->
 <section class="container pt-4">
     <!--  row 1 -->
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-lg-9">
             <h3> Les incontournables</h3>
         </div>
-        <div class="col-lg-3 text-right">
+        <div class="col-lg-3 text-right pt-2">
             <a href="{{ path("view_must_have") }}" class="voirplus">VOIR PLUS &rarr;</a>
         </div>
     </div> 
@@ -122,7 +119,11 @@
 </section>
 
 <!-- 4eme Bloc VALEURS-->
-{% include 'values/values.html.twig' %}    
+<section>
+    <div class="homepage">
+        {% include 'values/values.html.twig' %}    
+    </div>
+</section>
 {# 
 <section class="container">
     <div class="row">
