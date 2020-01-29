@@ -28,7 +28,7 @@
     </head>
 
     <body>
-        <header> 
+        <header>
 
             <!-- 1ère navbar -->
             <div class="container-fluid">
@@ -51,14 +51,13 @@
                     <div class="col-lg-2 offset-lg-2 d-flex justify-content-end">
                         <a href="{{ path("account") }}" class="cp-icone"><img src="/assets/img/profil.png" alt="accéder à votre espace client"></a>
                        <a href="#" class="cp-icone"> <img src="/assets/img/shop.png" alt="accéder à votre panier"></a>
-                    </ul>
                     </div>
                 </div>
             </div>
-           
 
-            <!-- 2ème navbar -->  
-            <div class="nav-border container-fluid">               
+
+            <!-- 2ème navbar -->
+            <div class="nav-border container-fluid">
                 <div class="row cp-navbar2">
                     <div class="col-lg-4">
                         <nav aria-label="breadcrumb">
@@ -67,12 +66,12 @@
                                     aria-hidden="true"></i></li>
                                 <li class="breadcrumb-item active">{% if breadcrumb is defined %} {{ breadcrumb }} {% endif %}</li>
                             </ol>
-                        </nav>    
+                        </nav>
                     </div>
-                        
+
                     <div class="col-lg-8 marge-nav align-self-start   ">
                         <nav class="navbar navbar-expand-lg py-3">
-                            
+
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"><img src="assets/img/menu.png"></span>
                             </button>
@@ -88,15 +87,15 @@
                                         {# <li class="nav-item"><a href="{{ path("valeurs") }}" class="nav-link text-uppercase">valeurs</a></li>
                                         <li class="nav-item"><a href="{{ path("blog") }}" class="nav-link text-uppercase">blog</a></li> #}
                                     </ul>
-                            </div>                           
+                            </div>
                         </nav>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </header>
         <main>
             <div class="container">
-              
+
             </div>
         </main>
         {% block body %}{% endblock %}
@@ -110,9 +109,9 @@
                     <div class="col-sm-6 col-lg-4 justify-content-center">
                         <img src="/assets/img/logofooter2.png" class="logo-footer img-fluid "  alt="logofooter">
                     </div>
-                
+
                     <div class="col-1">
-                    </div> 
+                    </div>
 
                     <div class="col-sm-12 col-lg-6 newsletter">
                         <div class="row ">
@@ -126,26 +125,26 @@
                                 </div>
                             </div>
                         </div>
-                    
 
-                        <div class="row ">                                
+
+                        <div class="row ">
                             <div id="reseaux" class="col-sm-12 col-lg-12">
                                 <ul class="text-center">
                                     <li class="reseau"><img src="/assets/img/fb.png"/></li>
                                     <li class="reseau"><img src="/assets/img/pinterest.png"/></li>
                                     <li class="reseau"><img src="/assets/img/twitter.png"/></li>
-                                    <li class="reseau">><img src="/assets/img/insta.png"/></li>   
-                                </ul>                                  
-                            </div>                                    
+                                    <li class="reseau">><img src="/assets/img/insta.png"/></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                                    
+
                     <div class="col-1">
                     </div>
-  
+
                 </div>
 
-                <div class="row pb-5"> 
+                <div class="row pb-5">
                     <div class="col-sm-6 col-lg-4 connaitre">
                         <ul>
                             <h4>Nous connaître</h4>
@@ -171,11 +170,11 @@
                             <li><p>Politique de confidentialité</p></li><br>
                             <li><p>Carrières </p></li>
                         </ul>
-                    </div>                       
-                </div>   
+                    </div>
+                </div>
 
             </section>
-                        
+
         </footer>
             <script src="/assets/js/jquery.min.js"></script>
             <script src="/assets/js/bootstrap.min.js"></script>
