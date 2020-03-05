@@ -2,7 +2,6 @@
 /* @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i&display=swap');
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i&display=swap');
 
 body{
@@ -110,6 +109,13 @@ padding-left: 40px;
 
 .breadcrumb-item+.breadcrumb-item::before {
    content: "";
+}
+
+.breadcrumb-item{
+    font-size: 14px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 600; 
+    margin-top: 5px;
 }
 
 .navbar-ariane .breadcrumb {

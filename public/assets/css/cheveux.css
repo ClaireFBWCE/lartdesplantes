@@ -69,11 +69,7 @@ font-family: 'Open Sans', sans-serif;
 }
 .card-header {
     padding: 0 1.25rem;
-    /* 
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125); */
+
 }
 .card {
     border: 1px solid;
@@ -184,4 +180,26 @@ margin-bottom: 20px;
 
 .oneProduct1 #actufleurs>img{
     max-height: 949px;
+}
+
+.margeblocCateg{
+    /* font-size: 40px;
+    padding-bottom: 20px ; */
+    padding-top: 50px ;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.bienfaitsDetails{
+    padding: 10px 40px 20px 40px;
+}
+
+.bienfaitsDetails img{
+    width: 25%;    
+}
+
+.bienfaitsDetails h5{
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 600; 
 }

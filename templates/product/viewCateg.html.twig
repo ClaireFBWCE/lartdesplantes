@@ -18,8 +18,8 @@
                                     
                     {% if category.id == 1 %}
                         <div class="col-lg-6 presentationcheveux">
-                            <div class="margebloc">
-                                <h3><img src="/assets/img/corps.png" class="face img-fluid py-4"  alt="corps">Corps</h3>
+                            <div class="margeblocCateg">
+                                <h3><img src="{{ asset('assets/img/corps.png') }}" class="face img-fluid py-4"  alt="corps">Corps</h3>
                                 <HR>
                                 <h4 class="text-uppercase pt-1"> Un corps sublimé </h4>
                                 <p>Pour une peau douce et sublime, vous pouvez compter 
@@ -27,13 +27,13 @@
                             </div>    
                         </div> 
                         <div id="actu4" class="col-lg-6 d-flex actu6">
-                            <img src="/assets/img/corps.jpg" class="img-fluid "  alt="produits">                           
+                            <img src="{{ asset('assets/img/corps.jpg') }}" class="img-fluid "  alt="produits">                           
                         </div>
 
                     {% elseif category.id == 3 %}
                         <div class="col-lg-6 presentationcheveux">
-                            <div class="margebloc">
-                                <h3><img src="/assets/img/FACE-1.png" class="face img-fluid py-4"  alt="visage">Visage</h3>
+                            <div class="margeblocCateg">
+                                <h3><img src="{{ asset('assets/img/FACE-1.png') }}" class="face img-fluid py-4"  alt="visage">Visage</h3>
                                 <HR>
                                 <h4 class="text-uppercase pt-1"> Un visage parfait </h4>
                                 <p>Pour une peau fraiche et jeune, vous pouvez compter 
@@ -41,12 +41,12 @@
                             </div>    
                         </div> 
                         <div id="actu4" class="col-lg-6 d-flex actu6">
-                            <img src="/assets/img/visage.jpg" class="img-fluid "  alt="produits">                           
+                            <img src="{{ asset('assets/img/visage.jpg') }}" class="img-fluid "  alt="produits">                           
                         </div>
                     {% elseif category.id == 5 %}
                         <div class="col-lg-6 presentationcheveux">
-                            <div class="margebloc">
-                                <h3><img src="/assets/img/cheveux.png" class="face img-fluid py-4"  alt="cheveux">Cheveux</h3>
+                            <div class="margeblocCateg">
+                                <h3><img src="{{ asset('assets/img/cheveux.png') }}" class="face img-fluid py-4"  alt="cheveux">Cheveux</h3>
                                 <HR>
                                 <h4 class="text-uppercase pt-1"> Vos cheveux </h4>
                                 <p>Pour des cheveux soyeux et forts, vous pouvez compter 
@@ -54,12 +54,12 @@
                             </div>    
                         </div> 
                         <div id="actu4" class="col-lg-6 d-flex actu6">
-                            <img src="/assets/img/pagecheveux.jpg" class="img-fluid "  alt="produits">                           
+                            <img src="{{ asset('assets/img/pagecheveux.jpg') }}" class="img-fluid "  alt="produits">                           
                         </div>
                     {% elseif category.id == 10 %}
                         <div class="col-lg-6 presentationcheveux">
-                            <div class="margebloc">
-                                <h3><img src="/assets/img/PLANT-9.png" class="face img-fluid py-4"  alt="maquillage">Maquillage</h3>
+                            <div class="margeblocCateg">
+                                <h3><img src="{{ asset('assets/img/PLANT-9.png') }}" class="face img-fluid py-4"  alt="maquillage">Maquillage</h3>
                                 <HR>
                                 <h4 class="text-uppercase pt-1"> Le maquillage </h4>
                                 <p>Pour un maquillage de reine, vous pouvez compter 
@@ -67,7 +67,7 @@
                             </div>    
                         </div> 
                         <div id="actu4" class="col-lg-6 d-flex actu6">
-                            <img src="/assets/img/maquillage2.jpg" class="img-fluid "  alt="produits">                           
+                            <img src="{{ asset('assets/img/maquillage2.jpg') }}" class="img-fluid "  alt="produits">                           
                         </div>
                             
                     {% endif %}
@@ -128,7 +128,7 @@
             <div class="col-lg-9">
                 <h3 class="nobordure"> Crème </h3>
             </div>
-            <div class="col-3 col-3 text-right">
+            <div class="col-3 col-3 text-right pt-2">
                 <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
             </div>
         </div>   
@@ -151,7 +151,7 @@
             <div class="col-lg-9">
                 <h3 class="nobordure"> Nettoyant et exfoliant </h3>
             </div>
-            <div class="col-3 col-3 text-right">
+            <div class="col-3 col-3 text-right pt-2">
                 <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
             </div>
         </div>   
@@ -174,7 +174,7 @@
             <div class="col-lg-9">
                 <h3 class="nobordure"> Shampooing </h3>
             </div>
-            <div class="col-3 col-3 text-right">
+            <div class="col-3 col-3 text-right pt-2">
                 <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
             </div>
         </div>   
@@ -197,7 +197,7 @@
             <div class="col-9">
                 <h3> Masques </h3>
             </div>
-            <div class="col-3 col-3 text-right">
+            <div class="col-3 col-3 text-right pt-2">
                 <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
             </div>
         </div>   
@@ -219,7 +219,7 @@
             <div class="col-9">
                 <h3> Après-shampoings </h3>
             </div>
-            <div class="col-3 col-3 text-right">
+            <div class="col-3 col-3 text-right pt-2">
                 <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
             </div>
         </div> 
@@ -242,7 +242,7 @@
             <div class="col-lg-9">
                 <h3 class="nobordure"> Yeux </h3>
             </div>
-            <div class="col-3 col-3 text-right">
+            <div class="col-3 col-3 text-right pt-2">
                 <a href="{{ path("view_product_category", { 'category_id': category.id, 'full': 1 }) }}"class="voirplus">VOIR PLUS &rarr;</a>
             </div>
         </div>   
@@ -262,7 +262,12 @@
 
 
 <!-- 4eme Bloc VALEURS-->
-{% include 'values/values.html.twig' %} 
+
+<section>
+    <div class="homepage">
+        {% include 'values/values.html.twig' %}    
+    </div>
+</section>
 
 {# <section class="container">
     <div class="row subcateg">
