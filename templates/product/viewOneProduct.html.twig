@@ -14,7 +14,7 @@
 
     <div class="row oneProduct1">
         <div id="actufleurs" class="col-lg-4">
-            <img src="/assets/img/fullgrace.jpg" class="fleurs img-fluid"  alt="actualites">
+            <img src="{{ asset('assets/img/fullgrace.jpg') }}" class="fleurs img-fluid"  alt="actualites">
         </div>
         <div id="actu1-oneProduct" class="col-lg-8">
             {# PRODUIT CHOISI #}
@@ -93,19 +93,19 @@
                                     <ul>
                                         <li>
                                             <h5> Pauline </h5>
-                                            <img src="assets/img/note.png" alt="note">
+                                            <img src="{{ asset('assets/img/note.png') }}" alt="note">
                                             <h6> Magnifique pour la peau !</h6>
                                             <p>Pour prendre soin de votre peau et respecter sa nature, veillez tout d’abord à choisir des produits adaptés à votre type de peau. Une peau sèche n’a pas les mêmes besoins qu’une peau grasse…</p>
                                         </li>
                                         <li>
                                             <h5> Clémence </h5>
-                                            <img src="assets/img/note.png" alt="note">
+                                            <img src="{{ asset('assets/img/note.png') }}" alt="note">
                                             <h6> Sublimes produits !</h6>
                                             <p>J'adore tous les produits de cette marque, les crèmes sont extraordinaire. Ni trop épaisses, ni trop fluides. Application simple et agréable, qui pénètre assez vite et ne laisse pas de film gras. Hydrate bien et sent super bon.</p>
                                         </li>
                                         <li>
                                             <h5> Antonella </h5>
-                                            <img src="assets/img/note.png" alt="note">
+                                            <img src="{{ asset('assets/img/note.png') }}" alt="note">
                                             <h6> J'adoooore... !</h6>
                                             <p>Crème qui sent bon , c’est frais . Crème non grasse parfait, hydratante, fini doux et soyeux, apaisante. Parfaite ! Et ingrédients bio !</p>
                                         </li>
@@ -135,9 +135,9 @@
                                 <div class="card-body row">   
                                     {% for skinneed in skinneeds %} 
                                         <div class="col-4 align-items-center">
-                                            <div class="valeurs2 text-center">
-                                                <img src="assets/img/{{ skinneed.picture_name }}"  class="produit img-fluid "  alt="bienfaits">
-                                                <h5 class="text-center"> {{ skinneed.name }} </h5>
+                                            <div class="bienfaitsDetails text-center">
+                                                <img src="{{ asset('assets/img/' ~ skinneed.picture_name ~ '') }}"  class="produit img-fluid "  alt="bienfaits">
+                                                <h5 class="text-center text-uppercase mt-3"> {{ skinneed.name }} </h5>
                                             </div>
                                         </div>
                                     {% endfor %}
@@ -163,7 +163,7 @@
         <div class="col-9">
             <h3> Nos suggestions </h3>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-3 text-right pt-2">
             <a href="{{ path("product") }}" class="voirplus ">VOIR PLUS &rarr;</a>
         </div>
     </div>   

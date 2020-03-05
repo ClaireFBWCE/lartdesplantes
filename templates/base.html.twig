@@ -8,15 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>CosmePlanet</title>
-        <link rel="shortcut icon" href="/assets/img/PLANT-9.png">
-        <link rel="stylesheet" href="/assets/css/fontawesome/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="/assets/css/normalize.css">
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
-        <link rel="stylesheet" href="/assets/css/values.css">
-        <link rel="stylesheet" href="/assets/css/cheveux.css">
-        <link rel="stylesheet" href="/assets/css/connect.css">
-        <link rel="stylesheet" href="/assets/css/mustHave.css">
+        <link rel="shortcut icon" href="{{ asset('assets/img/PLANT-9.png') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/css/fontawesome/css/fontawesome-all.min.css.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/values.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/cheveux.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/connect.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/mustHave.css') }}">
 
 
 
@@ -34,7 +34,7 @@
             <div class="container-fluid">
                 <div class="row d-flex">
                     <div class="col-lg-4 text-center">
-                        <a href="{{ path("homepage") }}"><img src="/assets/img/logo2.png" alt="Logo L'art des plantes" class="img-fluid logo"></a>
+                        <a href="{{ path("homepage") }}"><img src="{{ asset('assets/img/logo2.png') }}" alt="Logo L'art des plantes" class="img-fluid logo"></a>
                     </div>
                     <div class="col-lg-4 nav-item active">
                         <form>
@@ -42,20 +42,18 @@
                                 <input class="form-control search" type="text color" placeholder="Rechercher" aria-label="Search">
                                 <div class="input-group-append">
                                     <span class="input-group-text amber lighten-3" id="basic-text1">
-                                    <i><img src="/assets/img/loupe.png" class="loupe"></i></span>
+                                    <i><img src="{{ asset('assets/img/loupe.png') }}" class="loupe"></i></span>
                                 </div>
                             </div>
                         </form>
                     </div>
 
                     <div class="col-lg-2 offset-lg-2 d-flex justify-content-end">
-                        <a href="{{ path("account") }}" class="cp-icone"><img src="/assets/img/profil.png" alt="accéder à votre espace client"></a>
-                       <a href="#" class="cp-icone"> <img src="/assets/img/shop.png" alt="accéder à votre panier"></a>
-                    </ul>
+                        <a href="{{ path("account") }}" class="cp-icone"><img src="{{ asset('assets/img/profil.png') }}" alt="accéder à votre espace client"></a>
+                       <a href="#" class="cp-icone"> <img src="{{ asset('assets/img/shop.png') }}" alt="accéder à votre panier"></a>
                     </div>
                 </div>
             </div>
-           
 
             <!-- 2ème navbar -->  
             <div class="nav-border container-fluid">               
@@ -74,7 +72,7 @@
                         <nav class="navbar navbar-expand-lg py-3">
                             
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"><img src="assets/img/menu.png"></span>
+                                    <span class="navbar-toggler-icon"><img src="{{ asset('assets/img/menu.png') }}"></span>
                             </button>
 
 
@@ -108,7 +106,7 @@
             <section class="container">
                 <div class="row newsletter-global">
                     <div class="col-sm-6 col-lg-4 justify-content-center">
-                        <img src="/assets/img/logofooter2.png" class="logo-footer img-fluid "  alt="logofooter">
+                        <img src="{{ asset('assets/img/logofooter2.png') }}" class="logo-footer img-fluid "  alt="logofooter">
                     </div>
                 
                     <div class="col-1">
@@ -131,10 +129,10 @@
                         <div class="row ">                                
                             <div id="reseaux" class="col-sm-12 col-lg-12">
                                 <ul class="text-center">
-                                    <li class="reseau"><img src="/assets/img/fb.png"/></li>
-                                    <li class="reseau"><img src="/assets/img/pinterest.png"/></li>
-                                    <li class="reseau"><img src="/assets/img/twitter.png"/></li>
-                                    <li class="reseau">><img src="/assets/img/insta.png"/></li>   
+                                    <li class="reseau"><img src="{{ asset('assets/img/fb.png') }}"/></li>
+                                    <li class="reseau"><img src="{{ asset('assets/img/pinterest.png') }}"/></li>
+                                    <li class="reseau"><img src="{{ asset('assets/img/twitter.png') }}"/></li>
+                                    <li class="reseau">><img src="{{ asset('assets/img/insta.png') }}"/></li>   
                                 </ul>                                  
                             </div>                                    
                         </div>
@@ -177,8 +175,8 @@
             </section>
                         
         </footer>
-            <script src="/assets/js/jquery.min.js"></script>
-            <script src="/assets/js/bootstrap.min.js"></script>
+            <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
         {# {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %} #}
